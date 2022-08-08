@@ -24,6 +24,10 @@ public class Stack {
         return topValue;
     }
 
+    public long peak() {
+        return stackArray[top];
+    }
+
     public int size() {
         return top;
     }
