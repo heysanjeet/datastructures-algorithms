@@ -7,16 +7,16 @@ public class StackClient {
         stack.push(40);
         stack.push(90);
         //System.out.println(stack.isFull());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
-        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
+//        System.out.println(stack.pop());
         //stack.printStack();
 
        /* for(int i=0;i<=100;i++){
             stack.push(i);
         }*/
 
-       //stack.printStack();
+       stack.printStack();
     }
 }
