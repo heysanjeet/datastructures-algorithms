@@ -27,4 +27,10 @@ public class Stack {
     public int size() {
         return top;
     }
+
+    public void printStack() {
+        for (int i = top; i >= 0; i--) {
+            System.out.println(stackArray[i]);
+        }
+    }
 }
