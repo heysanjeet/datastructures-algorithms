@@ -28,8 +28,16 @@ public class Stack {
         return stackArray[top];
     }
 
+    public boolean isEmpty(){
+        return (top==-1);
+    }
+
     public int size() {
         return top;
+    }
+
+    public boolean isFull(){
+        return (top==maxSize-1);
     }
 
     public void printStack() {
