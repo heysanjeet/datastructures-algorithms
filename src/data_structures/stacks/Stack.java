@@ -1,5 +1,7 @@
 package data_structures.stacks;
 
+import java.util.Arrays;
+
 public class Stack {
     private int maxSize;
     private long[] stackArray;
@@ -13,12 +15,20 @@ public class Stack {
     }
 
     public void push(long value) {
+        if (isFull()) {
+            stackArray = Arrays.copyOf(stackArray, maxSize * 2);
+            maxSize = maxSize * 2;
+        }
         top++;
         stackArray[top] = value;
 
     }
 
     public long pop() {
+        if (isEmpty()) {
+            System.out.println("The stack is already empty....");
+            return -1;
+        }
         long topValue = stackArray[top];
         top--;
         return topValue;
@@ -28,16 +38,16 @@ public class Stack {
         return stackArray[top];
     }
 
-    public boolean isEmpty(){
-        return (top==-1);
+    public boolean isEmpty() {
+        return (top == -1);
     }
 
     public int size() {
         return top;
     }
 
-    public boolean isFull(){
-        return (top==maxSize-1);
+    public boolean isFull() {
+        return (top == maxSize - 1);
     }
 
     public void printStack() {
