@@ -1,4 +1,6 @@
-package data_structures.linked_list;
+package data_structures.linked_list.singly_linkedlist;
+
+import data_structures.linked_list.singly_linkedlist.SinglyLinkedList;
 
 public class SinglyLLClient {
     public static void main(String[] args) {
