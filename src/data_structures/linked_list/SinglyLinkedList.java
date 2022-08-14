@@ -25,6 +25,16 @@ public class SinglyLinkedList {
         return temp;
     }
 
+    public void insertLast(int data) {
+        Node current = first;
+        while (current.next != null) {
+            current = current.next;//loop until current.next is null
+        }
+        Node newNode = new Node();
+        newNode.data = data;
+        current.next = newNode;
+    }
+
     public void displayList() {
         System.out.println("Displaying nodes");
         Node current = first;
