@@ -21,7 +21,7 @@ public class App {
         nodeC.next = nodeD;
 
         System.out.println(listLength(nodeA));//4
-        System.out.println(listLength(nodeB));//3
+        //System.out.println(listLength(nodeB));//3
        /* System.out.println(listLength(nodeC));//7
         System.out.println(listLength(nodeD));//8*/
 
