@@ -1,4 +1,4 @@
-package data_structures.linked_list.singly_linkedlist;
+package data_structures.linked_list.singly_linked_list;
 
 import data_structures.linked_list.Node;
 
