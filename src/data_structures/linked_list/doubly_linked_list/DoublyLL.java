@@ -35,5 +35,16 @@ public class DoublyLL {
         last = newNode;//the linked list last field should point to the new node
     }
 
+    //assume non empty list
+    public Node deleteFirst() {
+        Node temp = first;
+        if (first.next == null) {//if only one item in the list
+            last = null;
+        } else {
+            first.next.previous = null;//the list first node will point to null
+        }
+        first = first.next;
+        return temp;//return the deleted old firstnode
+    }
 
 }
