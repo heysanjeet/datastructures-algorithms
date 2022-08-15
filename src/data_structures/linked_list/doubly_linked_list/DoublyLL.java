@@ -47,4 +47,16 @@ public class DoublyLL {
         return temp;//return the deleted old first node
     }
 
+    //assume non empty list
+    public Node deleteLast() {
+        Node temp = last;
+        if (first.next == null) {//we only have one node in the list
+            first = null;
+        } else {
+            last.previous.next = null;//the last node previous node next field point to null
+        }
+        last = last.previous;
+        return temp;
+    }
+
 }
