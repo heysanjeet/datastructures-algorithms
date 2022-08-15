@@ -44,7 +44,7 @@ public class DoublyLL {
             first.next.previous = null;//the list first node will point to null
         }
         first = first.next;
-        return temp;//return the deleted old firstnode
+        return temp;//return the deleted old first node
     }
 
 }
