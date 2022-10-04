@@ -85,4 +85,25 @@ public class DoublyLL {
         return true;
     }
 
+    public Node deleteKey(int key) {
+        Node current = first;//start from the beginning
+        while ((current.data != key)) {
+            current = current.next;
+            if (current == null) {
+                return null;
+            }
+        }
+        if (current == first) {
+            first = current.next;
+        } else {
+            current.previous.next = current.next;
+        }
+        if (current == last) {
+            last.previous = current.previous;
+        } else {
+            current.next.previous = current.previous;
+        }
+        return current;
+    }
+
 }
