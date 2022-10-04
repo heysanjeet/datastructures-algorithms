@@ -9,6 +9,5 @@ public class DoublyLLClient {
         System.out.println(linkedList.deleteFirst().data);
         System.out.println(linkedList.isEmpty());
         System.out.println(linkedList.deleteLast());
-        System.out.println(linkedList.deleteLast());
     }
 }
