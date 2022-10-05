@@ -105,5 +105,11 @@ public class DoublyLL {
         }
         return current;
     }
-
+   public void printLL(){
+        Node current=first;
+        while (current !=null){
+            current.displayNode();
+            current=current.next;
+        }
+   }
 }
