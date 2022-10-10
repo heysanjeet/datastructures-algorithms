@@ -4,6 +4,10 @@ public class DoublyLL {
     private Node first;
     private Node last;
 
+    public DoublyLL() {
+        this.first = null;
+        this.last = null;
+    }
 
     public boolean isEmpty() {
         return (first == null);
@@ -85,31 +89,56 @@ public class DoublyLL {
         return true;
     }
 
+    // assume non-empty list
     public Node deleteKey(int key) {
-        Node current = first;//start from the beginning
-        while ((current.data != key)) {
+        Node current = first; // start from the beginning
+        while (current.data != key) {
             current = current.next;
             if (current == null) {
                 return null;
             }
         }
+
         if (current == first) {
-            first = current.next;
+            first = current.next; // make the first field point to the node following current since current will be deleted
         } else {
             current.previous.next = current.next;
         }
+
         if (current == last) {
-            last.previous = current.previous;
+            last = current.previous;
         } else {
             current.next.previous = current.previous;
         }
         return current;
+
     }
-   public void printLL(){
-        Node current=first;
-        while (current !=null){
+
+    public void printLL() {
+        Node current = first;
+        while (current != null) {
             current.displayNode();
-            current=current.next;
+            current = current.next;
         }
-   }
+    }
+
+    public void displayForward() {
+        System.out.print("List (first --> last): ");
+        Node current = first; // start from the beginning
+        while (current != null) {
+            current.displayNode(); // call the display method of the node
+            current = current.next; // move to the next node
+        }
+        System.out.println();
+    }
+
+    public void displayBackward() {
+        System.out.print("List (last --> first): ");
+        Node current = last; // start from the end
+        while (current != null) {
+            current.displayNode();
+            current = current.previous;
+        }
+        System.out.println();
+    }
 }
