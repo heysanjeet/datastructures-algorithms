@@ -3,6 +3,7 @@ package data_structures.arrays;
 public class Array {
     public static void main(String[] args) {
         char[] array = {'a', 'b', 'c', 'd'};
+
         findValue(array);
 
     }
