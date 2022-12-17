@@ -13,7 +13,7 @@ public class SearchValue {
     }
 
     public static void main(String[] args) {
-        String[] array={"Sunil","Sanjeet"};
+        String[] array={"Sanjeet"};
         System.out.println(searchvalue(array));
     }
 }
