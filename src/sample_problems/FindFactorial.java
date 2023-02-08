@@ -17,7 +17,20 @@ public class FindFactorial {
         return (num * recursiveApproachForFactorial(num - 1));
     }
 
+    public static int countZeroFromFactorial(int num) {
+        int fact = 1;
+        for (int i = 2; i <= num; i++) {
+            fact = fact * i;
+        }
+        int countZero = 0;
+        while (fact % 10 == 0) {
+            countZero++;
+            fact = fact / 10;
+        }
+        return countZero;
+    }
+
     public static void main(String[] args) {
-        System.out.println(recursiveApproachForFactorial(4));
+        System.out.println(countZeroFromFactorial(10));
     }
 }
