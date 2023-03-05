@@ -1,4 +1,4 @@
-package dynemic_programming;
+package recursion;
 
 public class Factorial {
 

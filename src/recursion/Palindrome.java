@@ -1,6 +1,4 @@
-package dynemic_programming;
-
-import java.util.Stack;
+package recursion;
 
 public class Palindrome {
     public static boolean isPlalindrome(String str, int start, int end) {
