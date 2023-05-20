@@ -1,4 +1,4 @@
-package sample_problems;
+package mathematics_problems;
 
 public class CountDigit {
     public static int count(int number) {

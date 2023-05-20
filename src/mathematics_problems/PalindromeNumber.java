@@ -1,4 +1,4 @@
-package sample_problems;
+package mathematics_problems;
 
 public class PalindromeNumber {
     public static boolean isPalindrome(int number) {
