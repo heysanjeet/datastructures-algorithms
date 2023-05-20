@@ -1,4 +1,4 @@
-package data_structures.java_collections;
+package data_structures.java_collections.stack;
 
 import java.util.ArrayDeque;
 
