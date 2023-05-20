@@ -11,12 +11,6 @@ U
 %src/data_structures/queues/Queue.java,f\6\f6a62c335a6a466e21788f2b4e9b0301c35ff816
 v
 Fsrc/data_structures/linked_list/doubly_linked_list/DoublyLLClient.java,f\3\f30550eb7a0a7448c663339c66fcdac525c9e108
-c
-3src/data_structures/binary_search_tree/BSTImpl.java,5\e\5e1c7748ec247c0b02b3d1d0f97721d9048450a7
-`
-0src/data_structures/binary_search_tree/Node.java,8\0\8003777655f0ee9137abd77f4d595c6c32e77aff
-e
-5src/data_structures/binary_search_tree/BSTClient.java,9\f\9f40f5fc95ff1e8ee5b912c0d7a09686e8c09b4b
 f
 6src/data_structures/stacks/problems/ReverseString.java,f\9\f9778af022a3b63a3868c21018a5206eb730cf85
 l

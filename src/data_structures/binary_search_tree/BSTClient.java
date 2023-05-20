@@ -8,7 +8,7 @@ public class BSTClient {
         bst.insert(3, "Tiwari");
         bst.insert(2, "Sunil");
         bst.insert(1, "Sanjeet");
-        bst.remove(4);//not working
+        bst.remove(4);
 
 
         System.out.println(bst.findMax().key);
