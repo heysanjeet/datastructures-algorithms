@@ -32,9 +32,12 @@ public class IndexOfFirstOccurance {
             } else if (array[mid] < target) {
                 low = mid + 1;
             } else {
+                //if mid==0 then it is first occurrence
+                //if array[mid - 1] != array[mid] then also it is first occurrence
                 if (mid == 0 || array[mid - 1] != array[mid]) {
                     return mid;
                 } else {
+                    //this is mid occurrence and we are looking for first occurrence so we have go in left half
                     high = mid - 1;
                 }
             }
