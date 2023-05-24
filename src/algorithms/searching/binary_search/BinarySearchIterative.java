@@ -1,7 +1,7 @@
 package algorithms.searching.binary_search;
 
 public class BinarySearchIterative {
-    //we can implement binary search is the array is sorted.
+    //we can implement binary search is the array is sorted. O log(n)
     public static int searchElement(int array[], int target) {
         int low = 0;
         int high = array.length-1;

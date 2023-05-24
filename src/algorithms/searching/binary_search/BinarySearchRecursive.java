@@ -1,7 +1,7 @@
 package algorithms.searching.binary_search;
 
 public class BinarySearchRecursive {
-
+    //O log(n)
     public static int binarySearchRecursive(int[] array, int low, int high, int target) {
         if (low > high) {
             return -1;
