@@ -2,7 +2,8 @@ package data_structures.string.problems;
 
 public class SubsequenceString {
     public static void main(String[] args) {
-        System.out.println(checkIfStringSubsequence("ABCD", "AD", 3, 1));
+        //System.out.println(checkIfStringSubsequence("ABCD", "AD", 3, 1));
+        System.out.println(checkIfStringSubsequenceRecursion("ABCD", "AD", 3, 1));
     }
 
     //iterative way
@@ -17,6 +18,20 @@ public class SubsequenceString {
             }
         }
         return (j == m);
+    }
+
+    public static boolean checkIfStringSubsequenceRecursion(String str1, String str2, int n, int m) {
+        if (m == 0) {
+            return true;
+        }
+        if (n == 0) {
+            return false;
+        }
+        if (str1.charAt(n - 1) == str2.charAt(m - 1)) {
+            return checkIfStringSubsequenceRecursion(str1, str2, n - 1, m - 1);
+        } else {
+            return checkIfStringSubsequenceRecursion(str1, str2, n - 1, m);
+        }
     }
 
 
