@@ -11,15 +11,15 @@ public class SelectionSort {
 
     public static int[] selectionSort(int[] array) {
         for (int i = 0; i < array.length; i++) {
-            int minimum = i;
+            int currentMinimum = i;
             for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < array[minimum]) {// we found minimum value
-                    minimum = j;
+                if (array[j] < array[currentMinimum]) {// we found minimum value
+                    currentMinimum = j;
                 }
             }
             int temp = array[i];
-            array[i] = array[minimum];
-            array[minimum] = temp;
+            array[i] = array[currentMinimum];
+            array[currentMinimum] = temp;
         }
         return array;
     }
