@@ -2,7 +2,23 @@ package algorithms.patterns_problems;
 
 public class PatternsSolutions {
     public static void main(String[] args) {
-        pattern4(5);
+        pattern5(5);
+    }
+
+    /**
+     *
+     * *
+     * * *
+     * * * *
+     * * * * *
+     */
+    private static void pattern5(int n) {
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= row; col++) {
+                System.out.print("*"+" ");
+            }
+            System.out.println();
+        }
     }
 
     /**
