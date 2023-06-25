@@ -4,7 +4,7 @@ public class BSTImpl{
         private Node root;
 
         public void insert(int key, String value) {
-            Node newNode = new Node(key, value);
+            Node newNode = new Node(key, value);//node to be inserted.
             if(root == null) {
                 root = newNode;
             }
