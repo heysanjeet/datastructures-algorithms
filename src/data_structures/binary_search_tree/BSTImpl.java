@@ -1,21 +1,16 @@
 package data_structures.binary_search_tree;
 
 public class BSTImpl{
-
         private Node root;
 
         public void insert(int key, String value) {
-
             Node newNode = new Node(key, value);
-
             if(root == null) {
                 root = newNode;
             }
             else {
-
                 Node current = root;
                 Node parent;
-
                 while(true) {
                     parent = current;
                     if(key < current.key) {
