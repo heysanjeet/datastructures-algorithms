@@ -5,8 +5,7 @@ public class Array {
         char[] array = {'a', 'b', 'c', 'd'};
         //findValue(array);
         int[] intArray = {5, 4, 7, 3, 6, 4, 5, 2, 2, 7, 3, 9, 4, 7, 4};
-        System.out.println(countValue(intArray, 5));//2
-
+        //System.out.println(countValue(intArray, 5));//2
     }
 
     //Method to take char[] as a input parameter and find the value from the array.
@@ -32,4 +31,21 @@ public class Array {
         }
         return count;
     }
+
+    static int insertElement(int arr[], int n, int x, int cap, int pos)
+    {
+        if(n == cap){
+            return n;
+        }
+        int idx = pos - 1;
+        for(int i = n - 1; i >= idx; i--)
+        {
+            arr[i + 1] = arr[i];
+        }
+
+        arr[idx] = x;
+
+        return n + 1;
+    }
+
 }
