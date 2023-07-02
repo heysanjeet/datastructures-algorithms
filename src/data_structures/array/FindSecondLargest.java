@@ -16,6 +16,7 @@ public class FindSecondLargest {
         return res;
     }
 
+    //O(n)
     public static int findSecondLargestNaive(int[] array) {
         int largest = getLargest(array);
         int res = 0;
