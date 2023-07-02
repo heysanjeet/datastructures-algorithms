@@ -3,7 +3,7 @@ package data_structures.array;
 public class FindSecondLargest {
     public static void main(String[] args) {
         int[] array = {25, 64, 9, 9, 8, 53, 4, 231};
-        System.out.println(findSecondLargest(array));//1
+        System.out.println(findSecondLargestNaive(array));//1
     }
 
     public static int getLargest(int[] array) {
@@ -16,7 +16,7 @@ public class FindSecondLargest {
         return res;
     }
 
-    public static int findSecondLargest(int[] array) {
+    public static int findSecondLargestNaive(int[] array) {
         int largest = getLargest(array);
         int res = 0;
         for (int i = 1; i < array.length; i++) {
