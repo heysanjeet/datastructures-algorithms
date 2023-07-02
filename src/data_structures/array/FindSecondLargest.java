@@ -20,7 +20,7 @@ public class FindSecondLargest {
         int largest = getLargest(array);
         int res = 0;
         for (int i = 1; i < array.length; i++) {
-            if (array[i] != array[largest]) {
+            if (array[i] != array[largest]) {//ignore is equal to largest
                 if (res == -1) {
                     res = i;
                 } else if (array[res] < array[i]) {
