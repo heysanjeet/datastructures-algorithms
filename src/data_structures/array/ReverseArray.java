@@ -13,9 +13,9 @@ public class ReverseArray {
         int start = 0;
         int end = array.length - 1;
         while (start < end) {
-            int team = array[start];
+            int temp = array[start];
             array[start] = array[end];
-            array[end] = team;
+            array[end] = temp;
             start++;
             end--;
         }
