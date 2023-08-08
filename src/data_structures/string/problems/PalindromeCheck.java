@@ -2,9 +2,10 @@ package data_structures.string.problems;
 
 public class PalindromeCheck {
     public static void main(String[] args) {
-        System.out.println(checkIfPalindrome("ABCCBA"));//true
+        System.out.println(isPalindromeNaive("ABCCBA"));//true
     }
     //O(n)
+    //Read the string from left to right and right to left it is same
     public static boolean checkIfPalindrome(String str) {
         int start = 0;
         int end = str.length() - 1;
@@ -16,6 +17,13 @@ public class PalindromeCheck {
             end--;
         }
         return true;
+    }
+
+    public static boolean isPalindromeNaive(String str){
+        StringBuilder reverse=new StringBuilder(str);
+        reverse.reverse();
+        return str.equals(reverse.toString());
+
     }
 }
 
