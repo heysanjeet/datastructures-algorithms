@@ -10,7 +10,7 @@ public class PalindromeCheck {
         int start = 0;
         int end = str.length() - 1;
         while (start < end) {
-            if ((str.charAt(start) != str.charAt(end))) {
+            if ((str.charAt(start) != str.charAt(end))) {//if the characters are not same the false
                 return false;
             }
             start++;
