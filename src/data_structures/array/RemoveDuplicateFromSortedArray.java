@@ -14,7 +14,7 @@ public class RemoveDuplicateFromSortedArray {
         temp[0] = array[0];
         int resSize = 1;
         for (int i = 1; i < array.length; i++) {
-            if (temp[resSize - 1] != array[i]) {
+            if (temp[resSize - 1] != array[i]) {//found duplicate value
                 temp[resSize] = array[i];
                 resSize++;
             }
