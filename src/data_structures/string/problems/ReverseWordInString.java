@@ -20,9 +20,31 @@ public class ReverseWordInString {
             strStrack.push(startArray[i]);
         }
         while (!strStrack.empty()) {
-            rev = rev+" " + strStrack.pop();
+            rev = rev + " " + strStrack.pop();
         }
         return rev;
     }
 
+    //O(1)
+   /* public static void reverseWord(String str) {
+        int start = 0;
+        for (int end = 0; end < str.length(); end++) {
+            if (str.charAt(end) == ' ') {
+                reverse(str, start, end - 1);
+                start = end++;
+            }
+        }
+        reverse(str, start, str.length() - 1);
+        reverse(str, 0, str.length() - 1);
+    }
+
+    private static void reverse(String str, int start, int end) {
+        while (start <= end) {
+            int tem = start;
+            start = end;
+            end = tem;
+            start++;
+            end--;
+        }
+    }*/
 }
