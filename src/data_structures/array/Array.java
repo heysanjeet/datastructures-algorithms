@@ -32,7 +32,7 @@ public class Array {
         return count;
     }
 
-    static int insertElement(int arr[], int n, int x, int cap, int pos)
+    public static int insertElement(int arr[], int n, int x, int cap, int pos)
     {
         if(n == cap){
             return n;
@@ -42,9 +42,7 @@ public class Array {
         {
             arr[i + 1] = arr[i];
         }
-
         arr[idx] = x;
-
         return n + 1;
     }
 
