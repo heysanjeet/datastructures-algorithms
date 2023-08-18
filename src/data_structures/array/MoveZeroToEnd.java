@@ -26,7 +26,7 @@ public class MoveZeroToEnd {
     }
 
     private static int[] moveZeroToEnd(int[] array) {
-        int count = 0;
+        int count = 0;//to know the index of zero
         for (int i = 0; i < array.length; i++) {
             if (array[i] != 0) {//found non zero value
                 int temp = array[i];
