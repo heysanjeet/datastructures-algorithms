@@ -19,6 +19,7 @@ public class PalindromeCheck {
         return true;
     }
 
+    //Normal approach
     public static boolean isPalindromeNaive(String str){
         StringBuilder reverse=new StringBuilder(str);
         reverse.reverse();
