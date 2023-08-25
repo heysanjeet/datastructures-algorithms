@@ -7,7 +7,13 @@ import java.util.Stack;
 //o/p-Sanjeet Welcome
 public class ReverseWordInString {
     public static void main(String[] args) {
-        System.out.println(reverseWordInString("Welcome to Sanjeet"));
+        String str = "Welcome to Sanjeet";
+        //System.out.println(reverseWordInString(str));
+
+        char[] chars = str.toCharArray();
+        reverseWords(chars, str.length());
+        System.out.println(chars);
+
     }
 
 
@@ -25,26 +31,29 @@ public class ReverseWordInString {
         return rev;
     }
 
-    //O(1)
-   /* public static void reverseWord(String str) {
-        int start = 0;
-        for (int end = 0; end < str.length(); end++) {
-            if (str.charAt(end) == ' ') {
-                reverse(str, start, end - 1);
-                start = end++;
-            }
+
+    public static void reverse(char str[], int low, int high) {
+        while (low <= high) {
+            //swap
+            char temp = str[low];
+            str[low] = str[high];
+            str[high] = temp;
+            //
+            low++;
+            high--;
         }
-        reverse(str, start, str.length() - 1);
-        reverse(str, 0, str.length() - 1);
     }
 
-    private static void reverse(String str, int start, int end) {
-        while (start <= end) {
-            int tem = start;
-            start = end;
-            end = tem;
-            start++;
-            end--;
+    //O(1)
+    public static void reverseWords(char str[], int n) {
+        int start = 0;
+        for (int end = 0; end < n; end++) {
+            if (str[end] == ' ') {
+                reverse(str, start, end - 1);
+                start = end + 1;
+            }
         }
-    }*/
+        reverse(str, start, n - 1);
+        reverse(str, 0, n - 1);
+    }
 }
