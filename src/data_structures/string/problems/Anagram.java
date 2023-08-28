@@ -19,6 +19,7 @@ public class Anagram {
         char[] charArray2 = str2.toCharArray();
         Arrays.sort(charArray2);
         str2 = new String(charArray2);
+        //System.out.println(str1+"   "+str2);
 
         return str1.equals(str2);
     }
