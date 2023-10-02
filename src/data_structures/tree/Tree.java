@@ -1,6 +1,10 @@
 package data_structures.tree;
 
 public class Tree {
+    public void insert(int key) {
+        Node root = null;
+    }
+
     //time-O(n)
     //pace-O(h)
     public void inOrder(Node root) {
@@ -10,6 +14,7 @@ public class Tree {
             inOrder(root.right);
         }
     }
+
     //time-O(n)
     //pace-O(h)
     public void preOrder(Node root) {
@@ -19,7 +24,8 @@ public class Tree {
             preOrder(root.right);
         }
     }
-
+    //time-O(n)
+    //pace-O(h)
     public void postOrder(Node root) {
         if (root != null) {
             preOrder(root.left);
