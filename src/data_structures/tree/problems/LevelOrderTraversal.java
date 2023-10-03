@@ -7,6 +7,8 @@ public class LevelOrderTraversal {
     //approach first find the height of the tree.
     //then print node at distance k from the root.
     //Naive solution
+    //time-O(n+nh)-O(nh)
+    //space O(1)
     public void levelOrderTraversal(Node root, int k) {
         k = getHightOfTree(root);
         if (k == -1) {
