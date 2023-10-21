@@ -3,8 +3,8 @@ package data_structures.array;
 public class LeaderInArray {
 
     public static void main(String[] args) {
-        int[] array = {16, 17, 4, 3, 5, 2};
-        findLeaderInArray(array);
+        int[] array = {1, 2, 3, 4, 5, 2};
+        printLeaderInArray(array);//5, 2
     }
 
     /*Input: arr[] = {16, 17, 4, 3, 5, 2},
@@ -28,6 +28,20 @@ public class LeaderInArray {
             }
             if (isLeader == false) {
                 System.out.print(array[i] + " ");
+            }
+        }
+    }
+
+    //Time- O(n)
+    //Space-O(1)
+    public static void printLeaderInArray(int array[]) {
+        int currentLeader = array[array.length-1];
+        System.out.print(currentLeader + " ");
+
+        for (int i = array.length - 2; i > 0; i--) {
+            if (array[i] > currentLeader) {
+                currentLeader=array[i];
+                System.out.print(currentLeader + " ");
             }
         }
     }
