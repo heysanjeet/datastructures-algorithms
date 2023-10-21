@@ -3,7 +3,7 @@ package data_structures.array;
 public class LeftRotateByD {
     public static void main(String[] args) {
         int[] array = {3, 6, 2, 5, 3, 7, 8, 5};
-        leftRotateByD1(array, 2);
+        leftRotate(array, 2, array.length - 1);
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
@@ -42,5 +42,26 @@ public class LeftRotateByD {
             array[array.length - d + i] = temp[i];
         }
         return array;
+    }
+
+    //better approach
+    //time O(n)
+    //space O(1)
+    static void leftRotate(int arr[], int d, int n) {
+        reverse(arr, 0, d - 1);
+        reverse(arr, d, n - 1);
+        reverse(arr, 0, n - 1);
+
+    }
+
+    static void reverse(int arr[], int low, int high) {
+        while (low < high) {
+            int temp = arr[low];
+            arr[low] = arr[high];
+            arr[high] = temp;
+
+            low++;
+            high--;
+        }
     }
 }
