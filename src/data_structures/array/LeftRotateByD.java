@@ -29,7 +29,7 @@ public class LeftRotateByD {
 
     //Better time
     //time-O(n)
-    //space-O(n)
+    //space-O(d)
     public static int[] leftRotateByD1(int[] array, int d) {
         int[] temp = new int[d];
         for (int i = 0; i < d; i++) {
