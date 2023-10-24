@@ -11,6 +11,8 @@ public class StockBuyAndSell {
         System.out.println(maxProfit(arr, 0, arr.length - 1));
     }
 
+   /* Time Complexity: O(n2), Trying to buy every stock and exploring all possibilities.
+    Auxiliary Space: O(1)*/
     public static int maxProfit(int[] price, int start, int end) {
         if (end <= start) {
             return 0;
