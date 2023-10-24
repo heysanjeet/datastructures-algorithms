@@ -3,7 +3,7 @@ package data_structures.array;
 public class MaxDifferenceInArray {
     public static void main(String[] args) {
         int array[] = {2, 3, 10, 6, 4, 8, 1};
-        System.out.println(findMaxDiff(array));
+        System.out.println(findMaxDiffEfficient(array));
     }
 
     /*Input : arr = {2, 3, 10, 6, 4, 8, 1}
@@ -22,6 +22,16 @@ public class MaxDifferenceInArray {
             for (int j = i + 1; j < array.length; j++) {
                 result = Math.max(result, array[j] - array[i]);//the difference is more than current result then we update the result.
             }
+        }
+        return result;
+    }
+
+    public static int findMaxDiffEfficient(int[] array) {
+        int result = array[1] - array[0];
+        int minvalue = array[0];
+        for (int j = 1; j < array.length; j++) {
+            result = Math.max(result, array[j] - minvalue);
+            minvalue = Math.min(minvalue, array[j]);//if the miniValue is smaller than current value then update miniValue
         }
         return result;
     }
