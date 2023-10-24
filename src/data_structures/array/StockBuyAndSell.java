@@ -8,11 +8,12 @@ public class StockBuyAndSell {
      Maximum Profit  = 210 + 655 = 865*/
     public static void main(String[] args) {
         int arr[] = {100, 180, 260, 310, 40, 535, 695};
-        System.out.println(maxProfit(arr, 0, arr.length - 1));
+//        System.out.println(maxProfit(arr, 0, arr.length - 1));
+        System.out.println(maxProfitEfficient(arr));
     }
 
-   /* Time Complexity: O(n2), Trying to buy every stock and exploring all possibilities.
-    Auxiliary Space: O(1)*/
+    /* Time Complexity: O(n2), Trying to buy every stock and exploring all possibilities.
+     Auxiliary Space: O(1)*/
     public static int maxProfit(int[] price, int start, int end) {
         if (end <= start) {
             return 0;
@@ -25,6 +26,18 @@ public class StockBuyAndSell {
                             maxProfit(price, j + 1, end);
                     profit = Math.max(profit, currentProfilt);
                 }
+            }
+        }
+        return profit;
+    }
+
+    /*Time Complexity: O(n), Traversing over the array of size n
+    Auxiliary Space: O(1)*/
+    public static int maxProfitEfficient(int[] price) {
+        int profit = 0;
+        for (int i = 1; i < price.length; i++) {
+            if (price[i] > price[i - 1]) {
+                profit = profit + (price[i] - price[i - 1]);
             }
         }
         return profit;
