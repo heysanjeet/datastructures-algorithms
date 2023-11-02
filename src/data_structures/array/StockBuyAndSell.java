@@ -7,7 +7,7 @@ public class StockBuyAndSell {
      Buy the stock on day 4 and sell it on day 6 => 695 – 40 = 655
      Maximum Profit  = 210 + 655 = 865*/
     public static void main(String[] args) {
-        int arr[] = {100, 180, 260, 310, 40, 535, 695};
+        int arr[] = {7,1,5,3,6,4};
 //        System.out.println(maxProfit(arr, 0, arr.length - 1));
         System.out.println(maxProfitEfficient(arr));
     }
