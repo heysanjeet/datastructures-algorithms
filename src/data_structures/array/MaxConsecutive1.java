@@ -2,7 +2,7 @@ package data_structures.array;
 
 public class MaxConsecutive1 {
     public static void main(String[] args) {
-        int[] array = {1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1};
+        int[] array = {0, 1, 1, 1, 1, 0};
         System.out.println(maxConsecutiveOneE(array));//4
     }
 
@@ -33,8 +33,8 @@ public class MaxConsecutive1 {
                 count = 0;
             } else if (array[i] == 1) {
                 count++;
+                res = Math.max(res, count);
             }
-            res = Math.max(res, count);
         }
         return res;
     }
