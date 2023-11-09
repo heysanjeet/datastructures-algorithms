@@ -30,11 +30,11 @@ public class MaximumLengthEnvenOddSubArray {
         int result = 1;
         int currLength = 1;
         for (int i = 1; i < array.length; i++) {
-            if ((array[i] % 2 == 0 && array[i - 1] % 2 != 0) || (array[i] % 2 != 0 && array[i-1] % 2 == 0)) {
+            if ((array[i] % 2 == 0 && array[i - 1] % 2 != 0) || (array[i] % 2 != 0 && array[i - 1] % 2 == 0)) {
                 currLength++;
                 result = Math.max(result, currLength);
-            }else {
-                currLength=1;
+            } else {
+                currLength = 1;
             }
 
         }
