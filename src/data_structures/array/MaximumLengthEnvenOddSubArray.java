@@ -3,7 +3,7 @@ package data_structures.array;
 public class MaximumLengthEnvenOddSubArray {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 7, 9};
-        System.out.println(maximumLengthEnvenOddSubArray(array));//5
+        System.out.println(maximumLengthEnvenOddSubArrayEfficient(array));//5
     }
 
     /* Input: a[] = {1, 2, 3, 4, 5, 7, 9}
@@ -22,6 +22,21 @@ public class MaximumLengthEnvenOddSubArray {
                 }
             }
             result = Math.max(result, currentLength);
+        }
+        return result;
+    }
+
+    public static int maximumLengthEnvenOddSubArrayEfficient(int[] array) {
+        int result = 1;
+        int currLength = 1;
+        for (int i = 1; i < array.length; i++) {
+            if ((array[i] % 2 == 0 && array[i - 1] % 2 != 0) || (array[i] % 2 != 0 && array[i-1] % 2 == 0)) {
+                currLength++;
+                result = Math.max(result, currLength);
+            }else {
+                currLength=1;
+            }
+
         }
         return result;
     }
