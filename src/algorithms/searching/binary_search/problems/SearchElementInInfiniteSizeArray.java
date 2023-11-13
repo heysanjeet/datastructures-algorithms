@@ -1,5 +1,6 @@
 package algorithms.searching.binary_search.problems;
 
+//unbounded binary search
 public class SearchElementInInfiniteSizeArray {
     public static void main(String[] args) {
         //sorted array
