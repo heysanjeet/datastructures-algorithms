@@ -22,8 +22,9 @@ public class SearchElementInInfiniteSizeArray {
             i++;
         }
     }
-    //efficient approach
 
+    //efficient approach
+    //O(log(pos))
     public static int searchEfficient(int[] array, int target) {
         if (array[0] == target) {
             return 0;
