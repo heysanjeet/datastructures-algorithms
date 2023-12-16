@@ -1,9 +1,6 @@
 package algoexpert.easy;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class TwoSum {
 
@@ -11,9 +8,9 @@ public class TwoSum {
     //sample op= [-1,11]
     public static void main(String[] args) {
         int[] input = {3, 5, -4, 8, 11, 1, -1, 6};
-        int[] output = twoNumberSumSolution3(input, 10);//[-1,11]
-        for(int i=0;i<output.length;i++){
-            System.out.print(output[i]+" ");
+        int[] output = twoNumberSumSolution4(input, 10);//[-1,11]
+        for (int i = 0; i < output.length; i++) {
+            System.out.print(output[i] + " ");
         }
     }
 
@@ -50,6 +47,25 @@ public class TwoSum {
                 return new int[]{value, array[i]};
             }
             map.put(array[i], i);
+        }
+        return new int[0];
+    }
+
+    public static int[] twoNumberSumSolution4(int[] array, int targetSum) {
+        Arrays.sort(array);
+
+        int start = 0;
+        int end = array.length-1;
+
+        while (start < end) {
+            int currentsum = array[start] + array[end];
+            if (currentsum == targetSum) {
+                return new int[]{array[start], array[end]};
+            } else if (currentsum < targetSum) {
+                start++;
+            } else if (currentsum > targetSum) {
+                end--;
+            }
         }
         return new int[0];
     }
