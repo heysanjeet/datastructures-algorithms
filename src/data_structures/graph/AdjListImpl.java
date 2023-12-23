@@ -21,9 +21,9 @@ public class AdjListImpl {
         int V = 4;
         ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>(V);
 
-        for (int i = 0; i < V; i++)
+        for (int i = 0; i < V; i++) {
             adj.add(new ArrayList<Integer>());
-
+        }
         // Adding edges one by one
         addEdge(adj, 0, 1);
         addEdge(adj, 0, 2);
