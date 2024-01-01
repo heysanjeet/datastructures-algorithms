@@ -7,6 +7,8 @@ public class SortedSqaredArray {
         //array=[1,2,3,4,5,6,7,8,9]
         //op- [1,4,9,25,35,64,81]
     }
+
+    //time O(n) | space O(n)
     public int[] sortedSquaredArray2(int[] array) {
         // Write your code here.
         int[] sortedSquares = new int[array.length];
@@ -27,6 +29,7 @@ public class SortedSqaredArray {
     }
 
 
+    //time O(nlogn) | space O(n)
     public int[] sortedSquaredArray1(int[] array) {
         int[] tempArray = new int[array.length];
         for (int i = 0; i < array.length; i++) {
