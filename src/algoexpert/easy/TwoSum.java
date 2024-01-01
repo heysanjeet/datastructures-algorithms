@@ -15,6 +15,7 @@ public class TwoSum {
     }
 
     //solution 1
+    //tc- O(n^2) and space O(1)
     public static int[] twoNumberSumSolution1(int[] array, int targetSum) {
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
@@ -27,6 +28,7 @@ public class TwoSum {
         return new int[0];
     }
 
+    //Time- O(n), space O(n)
     public static int[] twoNumberSumSolution2(int[] array, int targetSum) {
         Set<Integer> set = new HashSet<>();
         for (int i = 0; i < array.length; i++) {
@@ -39,6 +41,7 @@ public class TwoSum {
         return new int[0];
     }
 
+    //time O(n) | space O(n)
     public static int[] twoNumberSumSolution3(int[] array, int targetSum) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < array.length; i++) {
@@ -51,6 +54,7 @@ public class TwoSum {
         return new int[0];
     }
 
+    //time: O(nlogn) | space O(1)
     public static int[] twoNumberSumSolution4(int[] array, int targetSum) {
         Arrays.sort(array);
 
