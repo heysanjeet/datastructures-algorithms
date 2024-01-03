@@ -12,7 +12,7 @@ public class MajorityElement {
         return nums[nums.length / 2];
     }
 
-    //time O(n) | O(n)
+    //time O(n) |O(n)
     public int majorityElement(int[] nums) {
         int n=nums.length;
         Map<Integer, Integer> map=new HashMap<Integer,Integer>();
