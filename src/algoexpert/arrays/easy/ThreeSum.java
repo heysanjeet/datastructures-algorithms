@@ -10,6 +10,8 @@ public class ThreeSum {
         //[[-8,2,6],[-8,3,5],[-6,1,5]]
     }
 
+
+    //time O(n^2) | space O(n)
     public static List<Integer[]> threeNumberSum(int[] array, int targetSum) {
         Arrays.sort(array);
         List<Integer[]> triplets = new ArrayList<Integer[]>();
