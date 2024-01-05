@@ -5,6 +5,9 @@ import java.util.Set;
 
 public class ContainsDuplicate11 {
 
+    public static void main(String[] args) {
+
+    }
 
     //Time O(n) | space O(n)
     public boolean containsNearbyDuplicate(int[] nums, int k) {
