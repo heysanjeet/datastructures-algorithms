@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class SmallestDifference {
     public static void main(String[] args) {
-
+         //input: arrayOne={-1,5,10,20,28,3}, arrayTwo={26,134,135,15,17};
+        //output={28,26}
     }
 
     //time O(nlog(n)+mlog(n)) | space O(1)
