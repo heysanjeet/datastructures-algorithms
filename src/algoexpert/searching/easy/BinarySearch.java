@@ -1,4 +1,4 @@
-package algoexpert.arrays.easy;
+package algoexpert.searching.easy;
 
 import java.util.Arrays;
 
