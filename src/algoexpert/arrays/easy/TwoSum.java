@@ -8,7 +8,7 @@ public class TwoSum {
     //sample op= [-1,11]
     public static void main(String[] args) {
         int[] input = {3, 5, -4, 8, 11, 1, -1, 6};
-        int[] output = twoNumberSumSolution4(input, 10);//[-1,11]
+        int[] output = twoNumberSumSolution2(input, 10);//[-1,11]
         for (int i = 0; i < output.length; i++) {
             System.out.print(output[i] + " ");
         }
