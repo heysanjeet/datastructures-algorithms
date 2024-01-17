@@ -21,7 +21,7 @@ public class ArrayOfProduct {
         for (int i = 0; i < array.length; i++) {
             int runningProduct = 1;
             for (int j = 0; j < array.length; j++) {
-                if (i != j) {
+                if (i != j) {//dont consider the same position
                     runningProduct *= array[j];
                 }
                 products[i] = runningProduct;
