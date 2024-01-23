@@ -15,6 +15,50 @@ public class ArrayOfProduct {
 
     }
 
+
+    //Time O(n) | space O(n)
+    public int[] arrayOfProductsBest(int[] array) {
+        int[] products = new int[array.length];
+
+        int leftProduct = 1;
+        for (int i = 0; i < array.length; i++) {
+            products[i] = leftProduct;
+            leftProduct = leftProduct * array[i];
+        }
+        int rightProduct = 1;
+        for (int i = array.length - 1; i >= 0; i--) {
+            products[i] = products[i] * rightProduct;
+            rightProduct = rightProduct * array[i];
+        }
+        return products;
+    }
+
+
+    //Time O(n) | space O(n)
+    public int[] arrayOfProductsBetter(int[] array) {
+        int[] products = new int[array.length];
+        int[] leftProducts = new int[array.length];
+        int[] rightProducts = new int[array.length];
+
+        int leftRunningProduct = 1;
+        for (int i = 0; i < array.length; i++) {
+            leftProducts[i] = leftRunningProduct;
+            leftRunningProduct = leftRunningProduct * array[i];
+        }
+        int rigthRunningProduct = 1;
+        for (int i = array.length - 1; i >= 0; i--) {
+            rightProducts[i] = rigthRunningProduct;
+            rigthRunningProduct = rigthRunningProduct * array[i];
+        }
+
+        for (int i = 0; i < array.length; i++) {
+            products[i] = leftProducts[i] * rightProducts[i];
+        }
+
+        return products;
+    }
+
+
     //Time O(n^2) | space O(n)
     public int[] arrayOfProductsNaive(int[] array) {
         int[] products = new int[array.length];
