@@ -15,10 +15,10 @@ public class SortedSqaredArray {
         int smallerValueIdx = 0;
         int largerValueIdx = array.length - 1;
         for (int idx = array.length - 1; idx >= 0; idx--) {
-            int samllerValue = array[smallerValueIdx];
+            int smallerValue = array[smallerValueIdx];
             int largetValue = array[largerValueIdx];
-            if (Math.abs(samllerValue) > Math.abs(largetValue)) {
-                sortedSquares[idx] = samllerValue * samllerValue;
+            if (Math.abs(smallerValue) > Math.abs(largetValue)) {
+                sortedSquares[idx] = smallerValue * smallerValue;
                 smallerValueIdx++;
             } else {
                 sortedSquares[idx] = largetValue * largetValue;
