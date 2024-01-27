@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class MissingNumbers {
     public static void main(String[] args) {
-
+// input =[1,4,3] output=[2,5]
     }
 
 
