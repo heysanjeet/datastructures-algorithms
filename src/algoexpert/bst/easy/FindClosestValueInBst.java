@@ -7,7 +7,6 @@ public class FindClosestValueInBst {
 
 
     public static int findClosestValueInBst(BST tree, int target) {
-
         return findClosestValueInBst(tree, target, tree.value);
     }
 
